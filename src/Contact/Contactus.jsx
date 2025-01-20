@@ -46,7 +46,8 @@ const ContactUs = () => {
 
         {/* Newsletter Section */}
         <div className="w-full lg:w-1/3 border-2 border-[#22D3EE] shadow-[0_0_8px_#0ef] hover:shadow-[0_0_20px_#0ef] transition p-8 rounded-3xl mt-6 lg:mt-16 lg:ml-8"  data-aos="fade-right">
-          <h2 className="text-2xl font-bold mb-4 text-gray-100">Let’s Create</h2>
+          <h2 className="text-2xl font-bold mb-4 text-gray-100">
+          Let’s Create</h2>
           <p className="text-gray-200 mb-6">
           I am a Front-End Developer building responsive websites with HTML, CSS, JavaScript, React, and Tailwind CSS.
           </p>
