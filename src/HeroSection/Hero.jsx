@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Navbar from '../Navbar/Navbar';
 import arsal from '../assets/arsal1.png'; // Replace with your image path
-import { FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin,FaTwitter } from 'react-icons/fa';
 import Typed from 'typed.js'; // Import Typed.js
 import AOS from 'aos'; // Import AOS
 import 'aos/dist/aos.css'; // Import AOS styles
