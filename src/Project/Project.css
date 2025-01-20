@@ -1,0 +1,202 @@
+/* General Container */
+.project-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+.project-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.project-header h1 {
+  font-size: 35px;
+  color: #00ECFB;
+  font-weight: 600;
+}
+
+/* Timeline Container */
+.timeline-container {
+  position: relative;
+  padding-bottom: 40px;
+}
+
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  background-color: #00ECFB;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Timeline Items */
+.timeline-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Odd and Even Item Alignment */
+.timeline-item:nth-child(odd) {
+  align-items: flex-start;
+  padding-left: calc(50% + 40px);
+}
+
+.timeline-item:nth-child(even) {
+  align-items: flex-end;
+  padding-right: calc(50% + 40px);
+}
+
+/* Timeline Dot */
+.timeline-dot {
+  height: 20px;
+  width: 20px;
+  background-color: #00ECFB;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  top: 0;
+  box-shadow: 0 0 10px #00ECFB;
+}
+
+/* Timeline Date */
+.timeline-date {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 10px 0;
+  text-align: center;
+  color: white;
+}
+
+/* Timeline Content */
+.timeline-content {
+  background-color: #20242D;
+  border: 2px solid #00ECFB;
+  padding: 20px 30px;
+  border-radius: 32px;
+  box-shadow: 0 0 8px #0ef;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.timeline-content:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #0ef;
+}
+
+.timeline-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #00ECFB;
+}
+
+.timeline-content p {
+  font-size: 1rem;
+  color: white;
+  line-height: 1.6;
+}
+
+/* Responsive Styles for Medium Screens */
+
+
+/* Responsive Styles for Small Screens */
+@media (max-width: 768px) {
+  .timeline-container::before {
+    left: 15px;
+  }
+
+  .timeline-item {
+    align-items: flex-start !important;
+    padding-left: 40px;
+    padding-right: 0;
+    text-align: left;
+  }
+
+  .timeline-dot {
+    left: 15px;
+    width: 15px;
+    height: 15px;
+  }
+
+  .timeline-content {
+    margin-left: 30px;
+    width: calc(100% - 45px);
+    height: 100%;
+  }
+
+  /* Ensure equal card sizes even on small screens */
+  .timeline-content {
+    min-height: 180px;
+  }
+  .timeline-item:nth-child(even){
+    padding: calc(0% + 0px);
+  }
+  .timeline-item:nth-child(odd){
+    padding: calc(0% + 0px);
+  }
+  .timeline-date{
+    margin-left: 30px;
+  }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+  .timeline-container::before {
+    left: 10px;
+    width: 5px;
+  }
+
+  .timeline-item {
+    padding-left: 30px;
+  }
+
+  .timeline-dot {
+    left: 10px;
+    width: 12px;
+    height: 12px;
+  }
+
+  .timeline-content {
+    margin-left: 25px;
+    padding: 15px 20px;
+    font-size: 0.9rem;
+    height: 100%;
+  }
+
+  /* Ensure equal card sizes even on extra small screens */
+  .timeline-content {
+    min-height: 150px;
+  }
+
+  .timeline-date {
+    font-size: 1rem;
+  }
+  
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #00ECFB;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #121212;
+}

@@ -1,0 +1,61 @@
+.home{
+    animation: floatImage 4s ease-in-out infinite;
+    animation-delay: 2s;
+}
+
+@media (max-width: 768px) {
+  .home {
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home {
+    margin-top: 60px;
+  }
+}
+
+  
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+       
+    }
+    50% {
+        transform: translateY(-24px);
+       
+    }
+    100% {
+        transform: translateY(0);
+       
+    }
+}
+
+/*.shine {
+    animation: shine 2s infinite linear; 
+    animation-fill-mode: forwards;
+    background: linear-gradient(
+      to right,
+      #9f9f9f 0%,
+      #ffffff 5%,
+      #cccccc 10%,
+      #ffffff 20%,
+      #9f9f9f 10%
+    );
+    background-size: 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  @keyframes shine {
+    0% {
+      background-position: 0%;
+    }
+    50% {
+      background-position: 30%;
+    }
+    100% {
+      background-position: 0%;
+    }
+  }*/
