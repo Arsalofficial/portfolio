@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      external: ['typed.js', 'react-scroll'],
+      external: ['typed.js', 'react-scroll', 'clsx'],
     },
   },
 });
