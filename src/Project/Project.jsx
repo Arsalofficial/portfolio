@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import './Project.css';
+import AOS from 'aos'; // Import AOS
+
 import 'aos/dist/aos.css'; // Import AOS styles
 import '../HeroSection/Hero.css';
 const Project = () => {
@@ -13,7 +15,7 @@ const Project = () => {
   return (
     <div className="project-container" id="projects">
       <div className="project-header">
-        <h1> Projects</h1>
+        <h1>My Projects</h1>
       </div>
 
       {/* Timeline Section */}

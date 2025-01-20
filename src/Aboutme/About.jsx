@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import arsal from '../assets/arsal.png';
 import { FaLinkedin } from 'react-icons/fa6';
 import AOS from 'aos'; // Import AOS
@@ -6,6 +6,13 @@ import 'aos/dist/aos.css';
 import { FaWhatsapp } from 'react-icons/fa';
 
 const About = () => {
+  useEffect(() => {
+    // Initialize AOS
+    AOS.init({
+      duration: 1000, // Animation duration in milliseconds
+      once: true, // Animation will happen only once
+    });
+  }, []);
   return (
     <div>
       <div className="bg-[#20242D] flex flex-col lg:flex-row items-center justify-between px-6 sm:px-8 md:px-16 lg:px-20 py-8" id='about'>

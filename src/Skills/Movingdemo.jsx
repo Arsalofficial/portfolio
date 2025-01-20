@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import { InfiniteMovingCards } from "../Skills/Moving";
 import html from '../assets/html.png';
 import css from '../assets/css.png';
@@ -13,6 +13,13 @@ import AOS from 'aos'; // Import AOS
 import 'aos/dist/aos.css'; 
 
 export function InfiniteMovingCardsDemo() {
+  useEffect(() => {
+        // Initialize AOS
+        AOS.init({
+          duration: 1000, // Animation duration in milliseconds
+          once: true, // Animation will happen only once
+        });
+      }, []);
   const testimonials = [
     { id: 1, img: html, text: 'I am an expert in HTML.' },
     { id: 2, img: css, text: 'I am an expert in CSS.' },
