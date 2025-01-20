@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import logo from '../assets/logo.png';
 import { Link } from 'react-scroll'; // Import Link from react-scroll
 import AOS from 'aos'; // Import AOS
 import 'aos/dist/aos.css'; 
 const Footer = () => {
+   useEffect(() => {
+      // Initialize AOS
+      AOS.init({
+        duration: 1000, // Animation duration in milliseconds
+        once: true, // Animation will happen only once
+      });
+    }, []);
   return (
     <footer className="bg-[#20242D] text-gray-50 py-8 md:py-12"  data-aos="zoom-in" >
       {/* Horizontal Line */}

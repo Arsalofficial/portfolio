@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Project.css';
 import 'aos/dist/aos.css'; // Import AOS styles
 import '../HeroSection/Hero.css';
 const Project = () => {
+   useEffect(() => {
+      // Initialize AOS
+      AOS.init({
+        duration: 1000, // Animation duration in milliseconds
+        once: true, // Animation will happen only once
+      });
+    }, []);
   return (
     <div className="project-container" id="projects">
       <div className="project-header">
