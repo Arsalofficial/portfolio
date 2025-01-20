@@ -13,7 +13,7 @@ const Project = () => {
   return (
     <div className="project-container" id="projects">
       <div className="project-header">
-        <h1>My Projects</h1>
+        <h1> Projects</h1>
       </div>
 
       {/* Timeline Section */}
