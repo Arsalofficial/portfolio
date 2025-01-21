@@ -1,16 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import AOS from 'aos'; // Import AOS library
 import 'aos/dist/aos.css'; // Import AOS CSS
-import { Link, animateScroll as scroll } from 'react-scroll';
+import { Link, animateScroll as scroll } from 'react-scroll'; // Import scroll
 import logo from '../assets/logo.png';
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false); 
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-    
-    AOS.init({ duration: 1000, once: true }); 
+    AOS.init({ duration: 1000, once: true });
   }, []);
+
+  const scrollToTop = () => {
+    scroll.scrollToTop(); // Scrolls to the top of the page
+  };
 
   return (
     <nav className="bg-[#2d313a] shadow-md w-[calc(100%-60px)] mt-8 mx-[30px] rounded-lg" data-aos="fade-down">
@@ -18,7 +21,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Left: Logo */}
           <div className="flex-shrink-0">
-            <a href="#">
+            <a onClick={scrollToTop} className="cursor-pointer">
               <img src={logo} alt="logo" className="w-16" />
             </a>
           </div>
