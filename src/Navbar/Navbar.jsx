@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import AOS from 'aos'; // Import AOS library
 import 'aos/dist/aos.css'; // Import AOS CSS
-import { Link, animateScroll as scroll } from './node_modules/react-scroll'; // Import scroll
+import { Link, animateScroll as scroll } from 'react-scroll'; // Import scroll
 import logo from '../assets/logo.png';
 
 const Navbar = () => {
