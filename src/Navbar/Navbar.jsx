@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import AOS from 'aos'; // Import AOS library
 import 'aos/dist/aos.css'; // Import AOS CSS
-import { Link } from 'react-scroll';
+import { Link } from "react-scroll";
 import logo from '../assets/logo.png';
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // State to toggle menu visibility
+  const [isMenuOpen, setIsMenuOpen] = useState(false); 
 
   useEffect(() => {
-    // Initialize AOS when the component is mounted
-    AOS.init({ duration: 1000, once: true }); // Adjust duration and once for single animation
+    
+    AOS.init({ duration: 1000, once: true }); 
   }, []);
 
   return (
