@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      external: ['typed.js',  'clsx', 'tailwind-merge'],
+      external: ['typed.js', 'react-scroll', 'clsx', 'tailwind-merge'],
     },
   },
 });
