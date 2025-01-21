@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import logo from '../assets/logo.png';
-import { Link } from 'react-scroll'; // Import Link from react-scroll
+import { Link, animateScroll as scroll } from 'react-scroll'; // Import scroll
 import AOS from 'aos'; // Import AOS
 import 'aos/dist/aos.css'; 
 const Footer = () => {
@@ -11,6 +11,11 @@ const Footer = () => {
         once: true, // Animation will happen only once
       });
     }, []);
+
+     const scrollToTop = () => {
+        scroll.scrollToTop(); // Scrolls to the top of the page
+      };
+    
   return (
     <footer className="bg-[#20242D] text-gray-50 py-8 md:py-12"  data-aos="zoom-in" >
       {/* Horizontal Line */}
@@ -20,8 +25,10 @@ const Footer = () => {
       <div className="flex flex-col items-center px-4 md:px-8">
         {/* Logo */}
         <div className="mb-5 mt-6 md:mt-8">
-          <img src={logo} alt="logo" className="w-20 md:w-24" />
-        </div>
+<a onClick={scrollToTop} className="cursor-pointer">
+              <img src={logo} alt="logo" className="w-20 md:w-24" />
+            </a>        </div>
+
 
         {/* Navigation Links */}
         <div className="grid grid-cols-3 gap-4 md:flex md:gap-6">
